@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Austine's Kitchen</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        /* HEADER */
+        header {
+            background: #080808;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        header h1 {
+            color: #f5a623;
+            font-size: 28px;
+        }
+
+        header p {
+            color: #aaa;
+            margin-top: 5px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #181818;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #f5a623;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+
+            background: linear-gradient(135deg, #111, #3a2208);
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #f5a623;
+            color: #111;
+            padding: 14px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: white;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+            color: #f5a623;
+        }
+
+        section > p {
+            color: #ccc;
+        }
+
+        /* MENU */
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .food {
+            background: #1d1d1d;
+            width: 280px;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .food:hover {
+            transform: translateY(-5px);
+            border-color: #f5a623;
+        }
+
+        .food h3 {
+            color: #f5a623;
+            margin-bottom: 12px;
+        }
+
+        .food p {
+            color: #bbb;
+            line-height: 1.5;
+        }
+
+        .price {
+            display: block;
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* ABOUT */
+        #about {
+            background: #181818;
+        }
+
+        .about-text {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            max-width: 500px;
+            margin: 30px auto;
+            background: #1d1d1d;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .contact-box p {
+            margin: 12px;
+            color: #ccc;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #050505;
+            padding: 30px;
+            text-align: center;
+            color: #888;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            .hero h2 {
+                font-size: 38px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 12px;
+            }
+
+            section h2 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>AUSTINE'S KITCHEN</h1>
+        <p>Fresh food. Great taste. Great moments.</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div>
+            <h2>Welcome to Austine's Kitchen</h2>
+
+            <p>
+                Experience delicious meals prepared
+                with passion and served with a smile.
+            </p>
+
+            <a href="#menu" class="button">
+                Explore Our Menu
+            </a>
+        </div>
+
+    </section>
+
+    <!-- MENU -->
+    <section id="menu">
+
+        <h2>Our Menu</h2>
+
+        <p>Choose from some of our customer favourites.</p>
+
+        <div class="menu">
+
+            <div class="food">
+                <h3>🍗 Chicken & Chips</h3>
+
+                <p>
+                    Crispy chicken served with
+                    golden fries.
+                </p>
+
+                <span class="price">KSh 450</span>
+            </div>
+
+
+            <div class="food">
+                <h3>🍔 Beef Burger</h3>
+
+                <p>
+                    Juicy beef burger with fresh
+                    vegetables and sauce.
+                </p>
+
+                <span class="price">KSh 500</span>
+            </div>
+
+
+            <div class="food">
+                <h3>🍚 Beef Pilau</h3>
+
+                <p>
+                    Fragrant rice cooked with
+                    tender beef and spices.
+                </p>
+
+                <span class="price">KSh 400</span>
+            </div>
+
+
+            <div class="food">
+                <h3>🥤 Fresh Juice</h3>
+
+                <p>
+                    Freshly prepared natural fruit
+                    juice.
+                </p>
+
+                <span class="price">KSh 150</span>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <a href="#contact" class="button">
+            Order Now
+        </a>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2>About Us</h2>
+
+        <p class="about-text">
+
+            Austine's Kitchen is a restaurant created
+            for people who love good food and great
+            experiences.
+
+            <br><br>
+
+            We prepare delicious meals using quality
+            ingredients and serve them in a warm and
+            welcoming environment.
+
+        </p>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>We'd love to hear from you.</p>
+
+        <div class="contact-box">
+
+            <p>📞 0725057393</p>
+
+            <p>📧 info@austineskitchen.com</p>
+
+            <p>📍 Kenya</p>
+
+        </div>
+
+        <a href="https://wa.me/254725057393?text=Hello%20Austine%27s%20Kitchen%2c%20I%20would%20like%20to%20place%20an%20order."
+          
+          class="button">
+        
+        
+      
+          order on whatsapp
+            
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Austine's Kitchen.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
